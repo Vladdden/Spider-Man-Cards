@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="hulk-1642260208977-4758.jpg" />
+    <None Remove="main_true.jpg" />
+    <None Remove="Screenshot 2022-01-15 182735.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="hulk-1642260208977-4758.jpg" />
+    <Resource Include="main_true.jpg" />
+    <Resource Include="Screenshot 2022-01-15 182735.png" />
+  </ItemGroup>
+  
+</Project>

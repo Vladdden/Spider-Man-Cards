@@ -1,0 +1,57 @@
+﻿<Window x:Class="MARVELCards.AddCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MARVELCards"
+        mc:Ignorable="d"
+        Title="AddCard" MinWidth="800" MinHeight="475" Height="465" Width="800" MaxWidth="800" MaxHeight="475">
+    <Window.Background>
+        <ImageBrush ImageSource="/hulk-1642260208977-4758.jpg" Stretch="None"/>
+    </Window.Background>
+    <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" MinWidth="800" MinHeight="450">
+        <GroupBox Header="Характеристики" Margin="0,141,30,0" HorizontalAlignment="Right" Width="265" Height="195" VerticalAlignment="Top" FontSize="16"/>
+
+        <Button Content="Добавить" HorizontalAlignment="Right" Margin="0,350,30,24" Width="265" FontSize="16" Background="#FFEEAF63" Height="75" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,15,0,0" Text="Имя" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="38" FontSize="16"/>
+        <TextBox x:Name="Name_textbox" Margin="30,41,180,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="664,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="58" FontSize="16"><Run Language="ru-ru" Text="Номер"/></TextBlock>
+        <TextBox x:Name="Number_textbox" Margin="664,41,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16" Width="106" LostFocus="Number_textbox_LostFocus" MaxLines="1" MaxLength="3" IsUndoEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="58" FontSize="16"><Run Language="ru-ru" Text="Тип"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="160,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="58" FontSize="16"><Run Language="ru-ru" Text="Группа"/></TextBlock>
+        <ComboBox x:Name="Group_combobox" HorizontalAlignment="Left" Margin="160,109,0,0" VerticalAlignment="Top" Width="120" Height="25"></ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="300,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="90" FontSize="16"><Run Language="ru-ru" Text="Состояние"/></TextBlock>
+        <ComboBox x:Name="Status_combobox" HorizontalAlignment="Left" Margin="300,110,0,0" VerticalAlignment="Top" Width="125" Height="25"/>
+        <TextBlock Margin="0,162,86,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="16" RenderTransformOrigin="1.207,0.652" HorizontalAlignment="Right" Width="99"><Run Language="ru-ru" Text="ИНТЕЛЛЕКТ"/></TextBlock>
+        <TextBox x:Name="Intelligence_textbox" Margin="0,163,43,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="40" HorizontalAlignment="Right" FontSize="16" MaxLength="3" MaxLines="1"/>
+        <TextBlock Margin="656,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="16" RenderTransformOrigin="1.207,0.652" HorizontalAlignment="Left" Width="58"><Run Language="ru-ru" Text="СИЛА"/></TextBlock>
+        <TextBox x:Name="Power_textbox" Margin="0,199,43,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="40" HorizontalAlignment="Right" FontSize="16" MaxLength="3" MaxLines="1"/>
+        <TextBlock Margin="0,232,86,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="16" RenderTransformOrigin="1.207,0.652" HorizontalAlignment="Right" Width="197"><Run Language="ru-ru" Text="СКОРОСТЬ И ЛОВКОСТЬ"/></TextBlock>
+        <TextBox x:Name="SpeedAndAgility_textbox" Margin="0,233,43,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="40" HorizontalAlignment="Right" FontSize="16" MaxLength="3" MaxLines="1"/>
+        <TextBlock Margin="0,269,86,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="16" RenderTransformOrigin="1.207,0.652" HorizontalAlignment="Right" Width="147"><Run Language="ru-ru" Text="ОСОБЫЕ УМЕНИЯ"/></TextBlock>
+        <TextBox x:Name="SpecialSkills_textbox" Margin="0,270,43,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="40" HorizontalAlignment="Right" FontSize="16" MaxLength="3" MaxLines="1"/>
+        <TextBlock Margin="0,304,86,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" FontSize="16" RenderTransformOrigin="1.207,0.652" HorizontalAlignment="Right" Width="187"><Run Language="ru-ru" Text="БОЙЦОВСКИЕ НАВЫКИ"/></TextBlock>
+        <TextBox x:Name="FightingSkills_textbox" Margin="0,305,43,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="40" HorizontalAlignment="Right" FontSize="16" MaxLength="3" MaxLines="1"/>
+        <TextBlock x:Name="AutoSetTollTip_textblock" HorizontalAlignment="Left" Margin="30,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"><Run Text="* "/><Run Language="ru-ru" Text="Выставлено автоматически"/></TextBlock>
+        <TextBox x:Name="Type_textbox" Margin="30,110,660,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16" LostFocus="Number_textbox_LostFocus"/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="90" FontSize="16"><Run Language="ru-ru" Text="Раздел"/></TextBlock>
+        <ComboBox x:Name="Chapter_combobox" HorizontalAlignment="Left" Margin="450,110,0,0" VerticalAlignment="Top" Width="170" Height="25"/>
+        <CheckBox x:Name="OriginalCollectionFlag_checkbox" Content="" HorizontalAlignment="Left" Margin="646,114,0,0" VerticalAlignment="Top" IsThreeState="True" Width="18" Height="20" RenderTransformOrigin="1,-0.748"/>
+        <GroupBox Header="Раздел/Группа" Margin="274,141,306,24" BorderBrush="#FFB47302" Background="White" Foreground="#FFB47302"/>
+        <TextBlock HorizontalAlignment="Left" Margin="664,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="101" FlowDirection="LeftToRight" TextAlignment="Center"><Run Language="ru-ru" Text="Моя первоначальная коллекция"/></TextBlock>
+        <Image HorizontalAlignment="Left" Height="267" Margin="290,161,0,0" VerticalAlignment="Top" Width="41">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="/Screenshot 2022-01-15 182735.png" Stretch="Fill"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image Margin="284,166,475,31" Stretch="Fill" Source="Screenshot 2022-01-15 182735.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="330,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="- Герои"/>
+        <TextBlock HorizontalAlignment="Left" Margin="330,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="- Злодеи"/>
+        <TextBlock HorizontalAlignment="Left" Margin="330,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="- Супергерои"/>
+        <TextBlock HorizontalAlignment="Left" Margin="330,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="- Архизлодей"/>
+        <TextBlock HorizontalAlignment="Left" Margin="330,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="- Пауки-оборотни"/>
+        <TextBlock HorizontalAlignment="Left" Margin="330,355,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="- Боевые карточки"/>
+        <TextBlock HorizontalAlignment="Left" Margin="330,393,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Text="- Карточки-бонусы"/>
+
+    </Grid>
+</Window>
