@@ -34,7 +34,7 @@ namespace MARVELCards
             return Directory.GetFiles(PathToTrades).Length + 1;
         }
         
-        private void WriteTradeToFile()
+        public void WriteTradeToFile()
         {
             try
             {

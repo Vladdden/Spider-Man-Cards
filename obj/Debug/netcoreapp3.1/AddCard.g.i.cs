@@ -165,7 +165,7 @@ namespace MARVELCards {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MARVELCards;V1.0.0.0;component/addcard.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MARVELCards;component/addcard.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddCard.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

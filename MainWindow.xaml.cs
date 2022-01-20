@@ -26,8 +26,8 @@ namespace MARVELCards
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AddCard addCard = new AddCard();
-            addCard.Show();
+            AddTrade addTrade = new AddTrade();
+            addTrade.Show();
         }
     }
 }

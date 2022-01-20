@@ -5,20 +5,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:MARVELCards"
         mc:Ignorable="d"
-        Title="AddTrade" Height="450" Width="800">
+        Title="Новая покупка" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/back.webp"/>
+        </Grid.Background>
         <TextBlock HorizontalAlignment="Left" Margin="30,15,0,0" Text="Имя" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="38" FontSize="16"/>
         <TextBox x:Name="Name_textbox" Margin="30,40,240,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
         <TextBlock HorizontalAlignment="Left" Margin="610,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="38" FontSize="16"><Run Language="ru-ru" Text="Цена"/></TextBlock>
-        <TextBox x:Name="Name_textbox_Copy" Margin="610,40,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
-        <CheckBox Content="Известно точное количество карт" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Height="25" Width="275" FontSize="16"/>
-        <TextBox x:Name="Name_textbox_Copy1" Margin="320,94,400,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <TextBox x:Name="Cost_textbox" Margin="610,40,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <CheckBox Content="Известно точное количество карт" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Height="25" Width="275" FontSize="16" Checked="CheckBox_Checked"/>
+        <TextBox x:Name="CountOfCard_textbox" Margin="320,94,400,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16" IsEnabled="False" TextChanged="CountOfCard_textbox_TextChanged" MaxLength="3"/>
         <TextBlock HorizontalAlignment="Left" Margin="469,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="80" FontSize="16" TextAlignment="Center"><Run Language="ru-ru" Text="Цена за"/><Run Text=" одн"/><Run Language="ru-ru" Text="у"/></TextBlock>
-        <TextBox x:Name="Name_textbox_Copy2" Margin="549,94,171,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
-        <TextBox x:Name="Name_textbox_Copy3" Margin="30,144,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="160" FontSize="16"/>
-        <Button Content="Сохранить" HorizontalAlignment="Right" Margin="0,0,25,25" Width="265" FontSize="16" Background="#FFEEAF63" Height="75" VerticalAlignment="Bottom"/>
-        <Button Content="Добавить карточку" HorizontalAlignment="Right" Margin="0,0,440,25" Width="330" FontSize="16" Background="#FFEEEE63" Height="75" VerticalAlignment="Bottom"/>
-        <TextBlock Margin="400,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" FontSize="16" TextAlignment="Center" HorizontalAlignment="Left" Width="70"><Run Text="Кол-во"/><LineBreak/><Run Language="ru-ru" Text="карточек"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="408,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="54" FontSize="24" FontWeight="Bold"><Run Language="ru-ru" Text="0 / 0"/></TextBlock>
+        <TextBox x:Name="PricePerCard_textbox" Margin="549,94,171,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16" IsEnabled="False"/>
+        <TextBox x:Name="Comment_textbox" Margin="30,159,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="120" FontSize="16"/>
+        <Button x:Name="SaveTrade_button" Content="Сохранить" HorizontalAlignment="Right" Margin="0,0,30,6" Width="265" FontSize="16" Background="#FFEEAF63" Click="SaveTrade_button_OnClick" Height="75" VerticalAlignment="Bottom"/>
+        <Button x:Name="AddCardInTrade_button" Content="Добавить карточку" Margin="30,0,0,6" FontSize="16" Background="#FFEEEE63" Height="75" VerticalAlignment="Bottom" Click="AddCardInTrade_button_OnClick" HorizontalAlignment="Left" Width="330"/>
+        <TextBlock Margin="390,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" FontSize="16" TextAlignment="Center" HorizontalAlignment="Left" Width="70"><Run Text="Кол-во"/><LineBreak/><Run Language="ru-ru" Text="карточек"/></TextBlock>
+        <TextBlock x:Name="CardsCount_textblock" HorizontalAlignment="Left" Margin="365,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="135" FontSize="24" FontWeight="Bold" Text="0 / 0" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="112,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="108" FontSize="16"><Run Language="ru-ru" Text="Комментарий"/></TextBlock>
     </Grid>
 </Window>

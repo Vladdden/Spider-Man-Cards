@@ -42,3 +42,5 @@ C:\Users\Vlad2\Pictures\Кактус\MARVELCards\obj\Debug\netcoreapp3.1\MARVELC
 C:\Users\Vlad2\Pictures\Кактус\MARVELCards\obj\Debug\netcoreapp3.1\MARVELCards.AssemblyInfo.cs
 C:\Users\Vlad2\Pictures\Кактус\MARVELCards\obj\Debug\netcoreapp3.1\MARVELCards.csproj.CoreCompileInputs.cache
 C:\Users\Vlad2\Pictures\Кактус\MARVELCards\obj\Debug\netcoreapp3.1\MARVELCards.genruntimeconfig.cache
+C:\Users\Vlad2\Pictures\Кактус\MARVELCards\obj\Debug\netcoreapp3.1\AddTrade.g.cs
+C:\Users\Vlad2\Pictures\Кактус\MARVELCards\obj\Debug\netcoreapp3.1\AddTrade.baml
