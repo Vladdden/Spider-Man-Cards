@@ -31,7 +31,7 @@ namespace MARVELCards
         {
             cardsInfo = new CardsInfo();
             PathToCards = Path.Combine(cardsInfo.PathToFolder, "Cards");
-            Id = GetId();
+            Id = CheckId();
             Number = number;
             Name = name;
             Chapter = chapter;
@@ -64,9 +64,14 @@ namespace MARVELCards
             }
         }
 
-        private int GetId()
+        private int CheckId()
         {
             return Directory.GetFiles(PathToCards).Length + 1;
+        }
+        
+        public int GetId()
+        {
+            return Id;
         }
     }
 }

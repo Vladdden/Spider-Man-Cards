@@ -43,7 +43,7 @@ namespace MARVELCards
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddCard_button_Click(object sender, RoutedEventArgs e)
         {
             //Check data
             {

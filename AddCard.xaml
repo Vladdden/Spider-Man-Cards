@@ -12,7 +12,7 @@
     <Grid ScrollViewer.VerticalScrollBarVisibility="Disabled" MinWidth="800" MinHeight="450">
         <GroupBox Header="Характеристики" Margin="0,141,30,0" HorizontalAlignment="Right" Width="265" Height="195" VerticalAlignment="Top" FontSize="16"/>
 
-        <Button Content="Добавить" HorizontalAlignment="Right" Margin="0,350,30,24" Width="265" FontSize="16" Background="#FFEEAF63" Height="75" Click="Button_Click"/>
+        <Button x:Name="AddCard_button" Content="Добавить" HorizontalAlignment="Right" Margin="0,350,30,24" Width="265" FontSize="16" Background="#FFEEAF63" Height="75" Click="AddCard_button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="30,15,0,0" Text="Имя" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="38" FontSize="16"/>
         <TextBox x:Name="Name_textbox" Margin="30,41,180,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
         <TextBlock HorizontalAlignment="Left" Margin="664,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="58" FontSize="16"><Run Language="ru-ru" Text="Номер"/></TextBlock>
