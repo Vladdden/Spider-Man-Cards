@@ -16,9 +16,6 @@ namespace MARVELCards
 
         public string PathToFolder = @"C:\Users\Vlad2\Documents\Человек-Паук";
 
-        //
-        // TODO Добавить вывод подсказки для групп
-
         public readonly string[] Types =
         {
             "Обычная",
