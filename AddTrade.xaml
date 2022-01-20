@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="AddTrade" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="30,15,0,0" Text="Имя" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="38" FontSize="16"/>
+        <TextBox x:Name="Name_textbox" Margin="30,40,240,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="610,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="38" FontSize="16"><Run Language="ru-ru" Text="Цена"/></TextBlock>
+        <TextBox x:Name="Name_textbox_Copy" Margin="610,40,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <CheckBox Content="Известно точное количество карт" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" Height="25" Width="275" FontSize="16"/>
+        <TextBox x:Name="Name_textbox_Copy1" Margin="320,94,400,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="469,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="58" Width="80" FontSize="16" TextAlignment="Center"><Run Language="ru-ru" Text="Цена за"/><Run Text=" одн"/><Run Language="ru-ru" Text="у"/></TextBlock>
+        <TextBox x:Name="Name_textbox_Copy2" Margin="549,94,171,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <TextBox x:Name="Name_textbox_Copy3" Margin="30,144,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="160" FontSize="16"/>
+        <Button Content="Сохранить" HorizontalAlignment="Right" Margin="0,0,25,25" Width="265" FontSize="16" Background="#FFEEAF63" Height="75" VerticalAlignment="Bottom"/>
+        <Button Content="Добавить карточку" HorizontalAlignment="Right" Margin="0,0,440,25" Width="330" FontSize="16" Background="#FFEEEE63" Height="75" VerticalAlignment="Bottom"/>
+        <TextBlock Margin="400,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" FontSize="16" TextAlignment="Center" HorizontalAlignment="Left" Width="70"><Run Text="Кол-во"/><LineBreak/><Run Language="ru-ru" Text="карточек"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="408,372,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="33" Width="54" FontSize="24" FontWeight="Bold"><Run Language="ru-ru" Text="0 / 0"/></TextBlock>
     </Grid>
 </Window>
