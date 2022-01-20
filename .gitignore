@@ -79,3 +79,7 @@
 /obj/Debug/netcoreapp3.1/MARVELCards_ze2mon3r_wpftmp.GeneratedMSBuildEditorConfig.editorconfig
 /Images/money.jpg
 /Images/trade.jpg
+/obj/
+/bin/
+/.vs/
+/.idea/
