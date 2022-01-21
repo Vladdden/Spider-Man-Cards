@@ -33,12 +33,27 @@ namespace MARVELCards
             CountOfCard_textbox.IsEnabled = true;
         }
 
+        private void Cost_textbox_SetPricePerOne(int TotalCount)
+        {
+            if (Int32.TryParse( Cost_textbox.Text, out int cost))
+            {
+                PricePerCard_textbox.Text = Math.Round((float)cost / (float)TotalCount, 2).ToString();;
+            }
+        }
+
         private void CountOfCard_textbox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             if (Int32.TryParse(CountOfCard_textbox.Text, out int TotalCount))
+            {
                 SetCountOfCards(second: TotalCount);
+                Cost_textbox_SetPricePerOne(TotalCount);
+            }
+                
             else if (CountOfCard_textbox.Text == "")
+            {
                 SetCountOfCards(second: 0);
+                PricePerCard_textbox.Text = "";
+            }
         }
 
         public void SetCountOfCards(int first = -1, int second = -1)
@@ -52,3 +67,9 @@ namespace MARVELCards
         }
     }
 }
+
+// TODO Добавить проверку полей
+// TODO Добавление карточки должно увеличивать счетчик
+// TODO При установке галочки и достижении нужного количества - должно выводиться окно "Закрыть или добавить еще"
+// TODO При создании карты передавать туда ее стоимость (как единицы) и ID-закупки, к которой она принадлежит
+// TODO При выключении галки поле количеств адолжно отключаться и очищаться 
