@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MARVELCards"
         mc:Ignorable="d"
-        Title="AddCard" MinWidth="800" MinHeight="475" Height="465" Width="800" MaxWidth="800" MaxHeight="475">
+        Title="AddCard" MinWidth="800" MinHeight="475" Height="465" Width="800" MaxWidth="800" MaxHeight="475" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="/hulk-1642260208977-4758.jpg" Stretch="None"/>
     </Window.Background>
