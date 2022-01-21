@@ -17,10 +17,23 @@ namespace MARVELCards
 
         private void AddCardInTrade_button_OnClick(object sender, RoutedEventArgs e)
         {
-            if (Int32.TryParse(Cost_textbox.Text, out int cost))
-                trade = new Trade(cost, Comment_textbox.Text);
-            AddCard addCard = new AddCard();
-            addCard.Show();
+            //Check data
+            {
+                if (Name_textbox.Text.Length > 5)
+                {
+                    if (Int32.TryParse(Cost_textbox.Text, out int cost))
+                    {
+                        if (cost  >= 0)
+                        {
+                            trade = new Trade(cost, Comment_textbox.Text);
+                            AddCard addCard = new AddCard();
+                            addCard.Show();                        }
+                        else MessageBox.Show("Введено невозможное значение цены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.None, MessageBoxOptions.DefaultDesktopOnly);
+                    }
+                    else MessageBox.Show("Убедитесь, что в поле ввода цены введены ИСКЛЮЧИТЕЛЬНО цифры.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.None, MessageBoxOptions.DefaultDesktopOnly);
+                }
+                else MessageBox.Show("Проверьте поле ввода имени!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning, MessageBoxResult.None, MessageBoxOptions.DefaultDesktopOnly);
+            }
         }
 
         private void SaveTrade_button_OnClick(object sender, RoutedEventArgs e)
@@ -68,7 +81,6 @@ namespace MARVELCards
     }
 }
 
-// TODO Добавить проверку полей
 // TODO Добавление карточки должно увеличивать счетчик
 // TODO При установке галочки и достижении нужного количества - должно выводиться окно "Закрыть или добавить еще"
 // TODO При создании карты передавать туда ее стоимость (как единицы) и ID-закупки, к которой она принадлежит
