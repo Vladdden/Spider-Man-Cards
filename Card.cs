@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Text;
 
@@ -24,10 +25,13 @@ namespace MARVELCards
         readonly int SpecialSkills;
         readonly int FightingSkills;
         readonly bool OriginalCollectionFlag;
+        readonly int TradeId;
+        readonly float PricePerCard;
+        
 
         private CardsInfo cardsInfo;
         
-        public Card(int number, string name, string chapter, string type, string group, string status, int intelligence, int power, int speedAndAgility, int specialSkills, int fightingSkills, bool originalCollectionFlag)
+        public Card(int number, string name, string chapter, string type, string group, string status, int intelligence, int power, int speedAndAgility, int specialSkills, int fightingSkills, bool originalCollectionFlag, int tradeId, float pricePerCard)
         {
             cardsInfo = new CardsInfo();
             PathToCards = Path.Combine(cardsInfo.PathToFolder, "Cards");
@@ -45,6 +49,8 @@ namespace MARVELCards
             FightingSkills = fightingSkills;
             Year = cardsInfo.CheckYear(Number);
             OriginalCollectionFlag = originalCollectionFlag;
+            TradeId = tradeId;
+            PricePerCard = pricePerCard;
             WriteCardToFile();
         }
 
@@ -54,7 +60,7 @@ namespace MARVELCards
             {
                 using (StreamWriter sw = new StreamWriter($"{PathToCards}\\{Number}.txt", true, System.Text.Encoding.Default))
                 {
-                    sw.WriteLine($"{Id},{Number},{Name},{Chapter},{Type},{Group},{Status},{Intelligence},{Power},{SpeedAndAgility},{SpecialSkills},{FightingSkills},{Year},{OriginalCollectionFlag}");
+                    sw.WriteLine($"{Id},{Number},{Name},{Chapter},{Type},{Group},{Status},{Intelligence},{Power},{SpeedAndAgility},{SpecialSkills},{FightingSkills},{Year},{OriginalCollectionFlag},{TradeId},{PricePerCard.ToString(new CultureInfo("en-US"))}");
                 }
                 Console.WriteLine("Запись выполнена");
             }

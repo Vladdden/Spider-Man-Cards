@@ -18,7 +18,9 @@ namespace MARVELCards
     public partial class AddCard : Window
     {
         private CardsInfo cardsInfo;
-        public AddCard()
+        private int TradeId;
+        private float PricePerCard;
+        public AddCard(int tradeId, float pricePerCard)
         {
             InitializeComponent();
             cardsInfo = new CardsInfo();
@@ -28,6 +30,8 @@ namespace MARVELCards
             }
             Status_combobox.ItemsSource = cardsInfo.Status;
             Chapter_combobox.ItemsSource = cardsInfo.Chapter;
+            TradeId = tradeId;
+            PricePerCard = pricePerCard;
         }
 
         private void Number_textbox_LostFocus(object sender, RoutedEventArgs e)
@@ -59,7 +63,7 @@ namespace MARVELCards
                                 {
                                     if (Intelligence < 500 && Power < 500 && SpeedAndAgility < 500 && SpecialSkills < 500 && FightingSkills < 500)
                                     {
-                                        Card card = new Card(Num, Name_textbox.Text, Chapter_combobox.Text, Type_textbox.Text, Group_combobox.Text, Status_combobox.Text, Intelligence, Power, SpeedAndAgility, SpecialSkills, FightingSkills, (bool)OriginalCollectionFlag_checkbox.IsChecked);
+                                        Card card = new Card(Num, Name_textbox.Text, Chapter_combobox.Text, Type_textbox.Text, Group_combobox.Text, Status_combobox.Text, Intelligence, Power, SpeedAndAgility, SpecialSkills, FightingSkills, (bool)OriginalCollectionFlag_checkbox.IsChecked, TradeId, PricePerCard);
                                     }
                                     else MessageBox.Show("Введено невозможное значение параметра карточки!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.None, MessageBoxOptions.DefaultDesktopOnly);
                                 }

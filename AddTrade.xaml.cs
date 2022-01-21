@@ -26,8 +26,9 @@ namespace MARVELCards
                         if (cost  >= 0)
                         {
                             trade = new Trade(cost, Comment_textbox.Text);
-                            AddCard addCard = new AddCard();
-                            addCard.Show();                        }
+                            AddCard addCard = new AddCard(trade.Id, Convert.ToSingle(PricePerCard_textbox.Text));
+                            addCard.Show();                        
+                        }
                         else MessageBox.Show("Введено невозможное значение цены!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.None, MessageBoxOptions.DefaultDesktopOnly);
                     }
                     else MessageBox.Show("Убедитесь, что в поле ввода цены введены ИСКЛЮЧИТЕЛЬНО цифры.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.None, MessageBoxOptions.DefaultDesktopOnly);
@@ -80,8 +81,3 @@ namespace MARVELCards
         }
     }
 }
-
-// TODO Добавление карточки должно увеличивать счетчик
-// TODO При установке галочки и достижении нужного количества - должно выводиться окно "Закрыть или добавить еще"
-// TODO При создании карты передавать туда ее стоимость (как единицы) и ID-закупки, к которой она принадлежит
-// TODO При выключении галки поле количеств адолжно отключаться и очищаться 

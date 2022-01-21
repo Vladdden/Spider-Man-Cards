@@ -7,7 +7,7 @@ namespace MARVELCards
 {
     class Trade
     {
-        readonly int Id;
+        public readonly int Id;
         readonly int Cost;
         readonly string Comment;
         private List<Card> listOfCards = new List<Card>();
